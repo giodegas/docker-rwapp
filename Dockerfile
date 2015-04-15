@@ -8,8 +8,7 @@ RUN apt-get -y install python redis-server python-redis git build-essential libe
 RUN /etc/init.d/redis-server start
 RUN cd /opt
 RUN git clone git://github.com/nicolasff/webdis.git
-RUN cd webdis
-RUN make
+RUN cd /opt/webdis; make
 
 EXPOSE 80/tcp
 EXPOSE 7379/tcp
