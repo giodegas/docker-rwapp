@@ -11,6 +11,10 @@ RUN git clone git://github.com/nicolasff/webdis.git
 RUN cd /opt/webdis; make
 
 EXPOSE 80/tcp
+# Redis port
+EXPOSE 6379/tcp
+# Webdis port
 EXPOSE 7379/tcp
+
 
 
